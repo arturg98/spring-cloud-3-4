@@ -1,0 +1,18 @@
+#konfiguracja gatwaya. lb://CONTENT-MS - lb oznacza loadBalancing
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: CONTENT-MS
+          uri: lb://CONTENT-MS
+          predicates:
+            - Path=/api/content/** #Na jaki endpoint musz? wej??, ?eby przekierowa? Cie pod ten adres wy?ej
+    discovery:
+      client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka/
+eureka:
+  instance:
+    prefer-ip-address: true

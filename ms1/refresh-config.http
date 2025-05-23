@@ -1,0 +1,7 @@
+POST http://localhost:8080/actuator/refresh
+
+//Są różne podejścia aktualizacji konfiguracji
+//WebHook, który automatycznie aktualizuje konfiguracje, gdy coś się zmieni
+// można zdefiniować WebHooka, że gdy będzie jakieś zdarzenie to strzela pod endpoint z aktualizacją configa
+//Pulling np. odpytywanie co 15 min pliku konfiguracynjego
+//Aktualizacja za pomocą strzelenia pod endpoint - ten jest najbardziej powszechny i prosty w utrzymaniu
